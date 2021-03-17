@@ -17,7 +17,7 @@
             <h1
               class="text-gray-600 text-2xl font-bold uppercase p-4 border-b border-gray-100"
             >
-              <a href="/" class="hover:text-gray-700">NicoCakes</a>
+              <a href="/" class="hover:text-gray-700 flex">NicoCakes <svg class="w-6 inline-block ml-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" /></svg></a>
             </h1>
             <div class="px-4 cursor-pointer md:hidden" id="burger">
               <svg class="w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clipRule="evenodd" /></svg>
@@ -49,8 +49,8 @@
 
       <main class="px-16 py-6 bg-gradient-to-r from-white to-pink-100 md:col-span-2">
         <div class="flex justify-center md:justify-end">
-          <a href="#" class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-white">Zaloguj</a>
-          <a href="#" class="btn text-primary ml-2 border-primary md:border-2 hover:bg-primary hover:text-white ">Zarejestruj</a>
+          <a href="#" class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-300">Zaloguj</a>
+          <a href="#" class="btn text-primary ml-2 border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-300">Zarejestruj</a>
         </div>
         <header>
           <h2 class="text-4xl font-semibold">Propozycje</h2>
@@ -58,7 +58,7 @@
         </header>
 
         <div>
-          <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">
+          <h4 class="font-bold mt-12 pb-2 border-b border-gray-200"
             Najnowsze torty
           </h4>
         </div>
@@ -124,11 +124,115 @@
             <!--most popular cakes cards-->
           </div>
           <div class="bg-secondary=100 flex justify-center">
-            <span class="btn bg-secondary-100 text-secondary-200 p-1 hover:shadow-inner">
+            <span class="btn bg-secondary-100 text-secondary-200 p-1 hover:shadow-inner" id="showMore">
               Pokaż więcej
             </span>
           </div>
+          <div class="mt-10 grid lg:grid-cols-3 gap-10 hidden" id="menuMore">
+            <div class="card hover:shadow-xl">
+              <img
+                class="w-full h-32 sm:h-48 object-cover"
+                src="/public/img/cake1.jpg.jpg"
+                alt="cake with nuts"
+                border-gray-200
+              />
+            
+            <div class="m-4">
+              <span class="font-bold">Orzechowa rozkosz</span>
+              <span class="block text-gray-500 text-md">500zł</span>
+            </div>
+            <div>
+             
+              <span class="badge"> <svg class="w-4 inline-block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+
+                Gluten</span>
+            </div>
+          </div>
+          <div class="card hover:shadow-xl">
+            <img
+              class="w-full h-32 sm:h-48 object-cover"
+              src="/public/img/cake2.jpg.jpg"
+              alt="cake with nuts"
+              border-gray-200
+            />
+          
+          <div class="m-4">
+            <span class="font-bold">KarmeLove marzenie</span>
+            <span class="block text-gray-500 text-md">200zł</span>
+          </div>
+          <div>
+            <span class="badge"><svg class="w-4 inline-block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" /></svg>Gluten free</span>
+          </div>
         </div>
+        <div class="card hover:shadow-xl">
+          <img
+            class="w-full h-32 sm:h-48 object-cover"
+            src="/public/img/cake3.jpg.jpg"
+            alt="cake with nuts"
+            border-gray-200
+          />
+        
+        <div class="m-4">
+          <span class="font-bold">Cynamonowy raj</span>
+          <span class="block text-gray-500 text-md">999zł</span>
+        </div>
+        <div>
+          <span class="badge"><svg class="w-4 inline-block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>Gluten</span>
+        </div>
+      </div>
+      <div class="card hover:shadow-xl">
+        <img
+          class="w-full h-32 sm:h-48 object-cover"
+          src="/public/img/cake1.jpg.jpg"
+          alt="cake with nuts"
+          border-gray-200
+        />
+      
+      <div class="m-4">
+        <span class="font-bold">Orzechowa rozkosz</span>
+        <span class="block text-gray-500 text-md">500zł</span>
+      </div>
+      <div>
+       
+        <span class="badge"> <svg class="w-4 inline-block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+
+          Gluten</span>
+      </div>
+    </div>
+    <div class="card hover:shadow-xl">
+      <img
+        class="w-full h-32 sm:h-48 object-cover"
+        src="/public/img/cake2.jpg.jpg"
+        alt="cake with nuts"
+        border-gray-200
+      />
+    
+    <div class="m-4">
+      <span class="font-bold">KarmeLove marzenie</span>
+      <span class="block text-gray-500 text-md">200zł</span>
+    </div>
+    <div>
+      <span class="badge"><svg class="w-4 inline-block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" /></svg>Gluten free</span>
+    </div>
+  </div>
+  <div class="card hover:shadow-xl">
+    <img
+      class="w-full h-32 sm:h-48 object-cover"
+      src="/public/img/cake3.jpg.jpg"
+      alt="cake with nuts"
+      border-gray-200
+    />
+  
+  <div class="m-4">
+    <span class="font-bold">Cynamonowy raj</span>
+    <span class="block text-gray-500 text-md">999zł</span>
+  </div>
+  <div>
+    <span class="badge"><svg class="w-4 inline-block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>Gluten</span>
+  </div>
+          </div>
+        </div>
+       
       </main>
     </div>
 <!--SVG icons-->
